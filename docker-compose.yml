@@ -1,13 +1,10 @@
 version: '3'
 services:
   wordpress:
+    image: wordpress
     env_file: .env
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    volumes:
+      - ./wp:/var/www/html
     ports:
       - "0.0.0.0:80:80"
     restart: always
-
-
- 
