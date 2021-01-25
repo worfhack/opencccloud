@@ -7,6 +7,7 @@ services:
     env_file: .env
     volumes:
       - ./wp:/var/www/html
+      - ./custom-php.ini:/usr/local/etc/php/conf.d/custom-php.ini
     ports:
       - "0.0.0.0:80:80"
     restart: always
