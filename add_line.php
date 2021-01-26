@@ -3,7 +3,7 @@ $new_array = [];
 $array = explode("\n", file_get_contents('wp-config.php'));
 $id = $argv[1];
 $key = $argv[2];
-$name = $argv[2];
+$name = $argv[3];
 foreach ($array as $line){
 
     $new_array[] = $line;
