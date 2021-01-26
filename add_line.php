@@ -8,7 +8,7 @@ foreach ($array as $line){
 
     $new_array[] = $line;
     if ($line == "<?php"){
-        $text = "define( 'AS3CF_SETTINGS', serialize( array('provider' => 'aws','access-key-id' =>'".$id."' ,'secret-access-key' => '".$key."', 'copy-to-s3' => true,) ) );";
+        $text = "define( 'AS3CF_SETTINGS', serialize( array('provider' => 'aws','access-key-id' =>'".$id."' ,'secret-access-key' => '".$key."', 'copy-to-s3' => true,    'serve-from-s3' => true,) ) );";
         $new_array[] = $text;
         $text = "define( 'AS3CF_BUCKET', '".$name."');";
         $new_array[] = $text;
